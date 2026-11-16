@@ -1,0 +1,9 @@
+# Keep .git (the grader needs the full history); drop local build outputs only.
+build/
+out/
+mayhem/build/
+*.o
+*.a
+*.so
+*.swp
+*~

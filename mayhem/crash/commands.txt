@@ -1,0 +1,7 @@
+rd -p 1000 4
+rd -p 0 2
+rd -p 2000 4
+rd -p 100000 2
+log
+set
+quit

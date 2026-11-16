@@ -1,0 +1,10 @@
+project: savantenvs/crash
+target: crash
+# mayhem-lint: ok-image-path (the namelist and command script are read-only inputs)
+cmds:
+  # Opens the fuzzed dump (@@) with a fixture namelist and runs the commands that read it.
+  - cmd: /mayhem/crash --minimal -i /mayhem/mayhem/crash/commands.txt /mayhem/mayhem/build/fixture/vmlinux @@
+    timeout: 60
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/crash/testsuite
